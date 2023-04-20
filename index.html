@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawasome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <script src="https://kit.fontawesome.com/7371d13137.js" crossorigin="anonymous"></script>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <!-- gsap.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js" integrity="sha512-tQFq+nb/TSS648SDzWbSj0A67t4I1PFzR0U6Oi/yEYFyUbAIwg74SOCbr7t2X1Rn+iln7sYwfh8y+z7p0gddOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- 스와이퍼 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+    <!-- 내거 -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- 섹션이동메뉴 -->
+  <div class="wrap">
+    <!-- 모바일 메뉴 버튼 -->
+    <span class="mb-bt-wrap">
+      <a href="#" class="mb-bt">
+        <span class="line"></span>
+      </a>
+    </span>
+  <!-- 모바일 메뉴바 -->
+  <div class="mb-nav ">
+    <div class="mb-nav-top clear">
+      <a href="#">로그인</a>
+      <a href="#">회원가입</a>
+    </div>
+    <div class="mb-nav-main">
+      <ul class="mb-menu">
+        <li>
+          <a href="#" class="mb-mainmenu">베스트</a>
+          <ul class="mb-submenu">
+            <li><a href="#">베스트 50</a></li>
+            <li><a href="#">주간베스트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"  class="mb-mainmenu">신제품</a>
+          <ul class="mb-submenu">
+            <li><a href="#">발렌타인</a></li>
+            <li><a href="#">루나뉴이어</a></li>
+            <li><a href="#">리미티드</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"  class="mb-mainmenu">기프트</a>
+          <ul class="mb-submenu">
+            <li><a href="#">기프트 베스트</a></li>
+            <li><a href="#">캔들</a></li>
+            <li><a href="#">낫랩</a></li>
+            <li><a href="#">기타</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="mb-mainmenu">배쓰&샤워</a>
+          <ul class="mb-submenu">
+            <li class="sub-t">배쓰
+              <ul class="bns">
+                <li><a href="#">배쓰밤</a></li>
+                <li><a href="#">버블바</a></li>
+                <li><a href="#">배쓰오일</a></li>
+                <li><a href="#">펀</a></li>
+            </ul>
+            </li>
+            <li class="sub-t">샤워
+              <ul class="bns">
+                <li><a href="#">솝</a></li>
+                <li><a href="#">샤워젤&젤리</a></li>
+                <li><a href="#">샤워밤</a></li>
+                <li><a href="#">샤워오일</a></li>
+                <li><a href="#">스크랩&버터</a></li>
+            </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="mb-mainmenu">보디</a>
+          <ul class="mb-submenu">
+            <li><a href="#">핸드앤풋</a></li>
+            <li><a href="#">마사지바</a></li>
+            <li><a href="#">더스팅파우더</a></li>
+            <li><a href="#">보디컨디셔너</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="mb-mainmenu">헤어</a>
+          <ul class="mb-submenu">
+            <li><a href="#">샴푸</a></li>
+            <li><a href="#">컨디셔너</a></li>
+            <li><a href="#">트리트먼트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"  class="mb-mainmenu">메이크업</a>
+          <ul class="mb-submenu">
+            <li><a href="#">페이스파우더</a></li>
+            <li><a href="#">파운데이션</a></li>
+            <li><a href="#">아이메이크업</a></li>
+            <li><a href="#">립</a></li>
+            <li><a href="#">기타</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"  class="mb-mainmenu">퍼퓸</a>
+          <ul class="mb-submenu">
+            <li><a href="#">보디스프레이</a></li>
+            <li><a href="#">솔리드퍼퓸</a></li>
+            <li><a href="#">워시카드</a></li>
+            <li><a href="#">퍼퓸낫랩</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"  class="mb-mainmenu">기초케어</a>
+          <ul class="mb-submenu">
+            <li><a href="#">클렌져</a></li>
+            <li><a href="#">쉐이빙크림</a></li>
+            <li><a href="#">토너</a></li>
+            <li><a href="#">로션</a></li>
+            <li><a href="#">립</a></li>
+            <li><a href="#">모이스춰라이져</a></li>
+            <li><a href="#">페이스마스크</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"  class="mb-mainmenu">고객센터</a>
+          <ul class="mb-submenu">
+            <li><a href="#">QnA</a></li>
+            <li><a href="#">1:1문의</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 모바일 메뉴마스크 -->
+  <div class="mb-menu-mask"></div>
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="inner">
+                <div class="top_banner">
+                    <a href="#">[덕찌 5종+깜짝선물] 오프라인 회원 대상 통합회원 사전 신청!</a>
+                </div>
+                <div class="menu">
+                    <h1><a href="#"><img src="images/logo_newyear.gif" alt="#"></a></h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#">베스트</a> 
+                                <ul class="r_menu">
+                                    <li><a href="#">베스트 50</a></li>
+                                    <li><a href="#">주간베스트</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">신제품</a> 
+                                <ul class="r_menu">
+                                    <li><a href="#">발렌타인</a></li>
+                                    <li><a href="#">루나뉴이어</a></li>
+                                    <li><a href="#">리미티드</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">기프트</a> 
+                                <ul class="r_menu">
+                                    <li><a href="#">기프트 베스트</a></li>
+                                    <li><a href="#">캔들</a></li>
+                                    <li><a href="#">낫랩</a></li>
+                                    <li><a href="#">기타</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">배쓰&샤워</a> 
+                                <ul class="r_menu">
+                                    <li class="nohover">배쓰  
+                                        <ul class="bns">
+                                            <li><a href="#">배쓰밤</a></li>
+                                            <li><a href="#">버블바</a></li>
+                                            <li><a href="#">배쓰오일</a></li>
+                                            <li><a href="#">펀</a></li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li class="nohover">샤워  
+                                        <ul class="bns">
+                                            <li><a href="#">솝</a></li>
+                                            <li><a href="#">샤워젤&젤리</a></li>
+                                            <li><a href="#">샤워밤</a></li>
+                                            <li><a href="#">샤워오일</a></li>
+                                            <li><a href="#">스크랩&버터</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">보디</a>
+                                <ul class="r_menu">
+                                    <li><a href="#">핸드앤풋</a></li>
+                                    <li><a href="#">마사지바</a></li>
+                                    <li><a href="#">더스팅파우더</a></li>
+                                    <li><a href="#">보디컨디셔너</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">헤어</a>
+                                <ul class="r_menu">
+                                    <li><a href="#">샴푸</a></li>
+                                    <li><a href="#">컨디셔너</a></li>
+                                    <li><a href="#">트리트먼트</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">메이크업</a>
+                                <ul class="r_menu">
+                                    <li><a href="#">페이스 파우더</a></li>
+                                    <li><a href="#">파운데이션</a></li>
+                                    <li><a href="#">아이 메이크업</a></li>
+                                    <li><a href="#">립</a></li>
+                                    <li><a href="#">기타</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">퍼퓸</a>
+                                <ul class="r_menu">
+                                    <li><a href="#">보디스프레이</a></li>
+                                    <li><a href="#">솔리드퍼퓸</a></li>
+                                    <li><a href="#">워시카드</a></li>
+                                    <li><a href="#">퍼퓸낫랩</a></li>
+                                </ul>
+                            </li>
+                           <li><a href="#">기초케어</a>
+                                <ul class="r_menu">
+                                    <li><a href="#">클렌져</a></li>
+                                    <li><a href="#">쉐이빙크림</a></li>
+                                    <li><a href="#">토너</a></li>
+                                    <li><a href="#">로션</a></li>
+                                    <li><a href="#">립</a></li>
+                                    <li><a href="#">모이스춰라이져</a></li>
+                                    <li><a href="#">페이스마스크</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객센터</a>
+                                <ul class="r_menu">
+                                    <li><a href="#">QnA</a></li>
+                                    <li><a href="#">1:1문의</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- 메뉴바 밑 아이콘 -->
+                        <div class="icon">
+                          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                          <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                          <a href="#" class="n_img"><i class="fa-regular fa-face-smile"></i></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- 메인베너 슬라이드 -->
+        <section class="main_slide">
+            <div class="inner">
+              <div class="swiper m_v_Swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="vs-slide1">
+                      <i></i>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="vs-slide2">
+                        <i></i>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="vs-slide3">
+                        <i></i>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="vs-slide4">
+                        <i></i>
+                      </a>
+                  </div>
+                </div>
+                <div class="m_v_swiper-button-next"></div>
+                <div class="m_v_swiper-button-prev"></div>
+                <div class="m_v_swiper-pagination"></div>
+              </div>
+            </div>
+        </section>
+        <!-- 발렌타인 행사메뉴 -->
+        <section class="val_e">
+            <div class="inner">
+                <img class="bag_img" src="images/칠판 테두리22222-01 copy.png" alt="#">
+                <img class="ctr_img" src="images/신상품원555-01.png" alt="#">
+                <a class="new01" href="#">
+                  <img src="images/신상품6.png" alt="신상품1">
+                  <div class="txt">
+                    <h2>VALENTINE BOMBSHELL</h2>
+                    <p class="bold">배쓰밤</p>
+                    <p class="light">&#8361; 30,000</p>
+                    <p class="regular">#발렌타인데이 #발렌타인밤쉘 <br> 
+                      #다마스크장미 #레몬</p>
+                  </div>
+                </a> 
+                <a class="new02" href="#">
+                  <img src="images/신상품7.png" alt="신상품2">
+                  <div class="txt">
+                    <h2>SLEEPY CANDLE</h2>
+                    <p class="bold">캔들</p>
+                    <p class="light">&#8361; 35,000</p>
+                    <p class="regular">#캔들 #슬리피캔들 <br> 
+                      #비건 #에센셜오일</p>
+                  </div>
+                </a> 
+                <a class="new03" href="#">
+                  <img src="images/신상품.png" alt="신상품3">
+                  <div class="txt">
+                    <h2>LOVE BUG</h2>
+                    <p class="bold">배쓰밤</p>
+                    <p class="light">&#8361; 17,000</p>
+                    <p class="regular">#발렌타인데이 #러브버그 <br> 
+                      #오렌지 #다마스크장미 #레몬</p>
+                  </div>
+                </a>
+                <a class="new04" href="#">
+                  <img src="images/신상품3.png" alt="신상품4">
+                  <div class="txt">
+                    <h2>KISS FROM A ROSE</h2>
+                    <p class="bold">기프트</p>
+                    <p class="light">&#8361; 40,000</p>
+                    <p class="regular">#발렌타인데이 #키스프롬어로즈 <br> 
+                      #블랙로즈 #로즈잼버블룬</p>
+                  </div>
+                </a>
+              </div>
+        </section>
+        <!-- 베스트 아이템 -->
+        <section class="bestItem">
+            <div class="inner">
+                <div class="flow_txt">
+                  <div class="content">
+                    LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM LUSH BEST ITEM 
+                  </div>  
+                </div>
+                <div class="swiper best_Swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="images/신상품1.png" alt="#">
+                        <div class="txt2">
+                          <h2>LOVE BUG</h2>
+                          <P class="regular">배쓰밤</P>
+                          <P class="bold">&#8361; 17,000</P>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="images/신상품2_1.png" alt="#">
+                        <div class="txt2">
+                          <h2>ROSE JAM</h2>
+                          <P class="regular">샤워젤</P>
+                          <P class="bold">&#8361; 19,000</P>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="images/베스트4.png" alt="#">
+                        <div class="txt2">
+                          <h2>TRUE ROMANCE</h2>
+                          <P class="regular">마사지바</P>
+                          <P class="bold">&#8361; 25,000</P>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="images/베스트5.png" alt="#">
+                        <div class="txt2">
+                          <h2>DEEP SLEEP</h2>
+                          <P class="regular">앱솝 솔트 큐브</P>
+                          <P class="bold">&#8361; 17,000</P>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="images/베스트6.png" alt="#">
+                        <div class="txt2">
+                          <h2>DIRTY BODY SPRAY</h2>
+                          <P class="regular">보디 스프레이</P>
+                          <P class="bold">&#8361; 60,000</P>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-scrollbar"></div>
+                  <div class="b_swiper-button-next"></div>
+                  <div class="b_swiper-button-prev"></div>
+                </div>
+              </div>
+        </section>
+        <!-- 매장찾기 & 스파 트리트먼트 -->
+        <section class="store_spa">
+          <div class="inner">
+            <div class="t_wrap clear">
+              <!-- 매장찾기 -->
+              <div class="left_box">
+                <h2>STORE</h2>
+                <input type="address" placeholder="검색할 지역을 입력하세요">
+                <a href="#" class="button">검색</a>
+                <div class="swiper store_Swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h3>현대백화점 대구점</h3>
+                        <a href="#">
+                          <img src="images/현대백화점.jpg" alt="#">
+                          <div class="txt_box">
+                            <ul>
+                              <li><span>주소 : </span>대구광역시 중구 달구벌대로 2077 현대백화점 7층 </li>
+                              <li><span>운영시간 : </span>월~목 10:30~20:00<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;금~일 10:30~20:30 </li>
+                              <li><span>전화번호 : </span>053-245-2753 </li>
+                            </ul>
+                          </div>
+                        </a>
+                        <a href="#" class="road">찾아오시는 길</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>신세계백화점 대구점</h3>
+                        <a href="#">
+                          <img src="images/신세계백화점.jpg" alt="#">
+                          <div class="txt_box">
+                            <ul>
+                              <li><span>주소 : </span> 대구광역시 동구 동부로 149 신세계백화점 6층 </li>
+                              <li><span>운영시간 : </span> 월~목 10:30~20:00<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 금~일 10:30~20:30 </li>
+                              <li><span>전화번호 : </span> 053-661-6660 </li>
+                            </ul>
+                          </div>
+                        </a>
+                        <a href="#" class="road">찾아오시는 길</a>
+                    </div>
+                    <div class="swiper-slide">
+                      <h3>롯데백화점 대구점</h3>
+                      <a href="#">
+                        <img src="images/롯데백화점.jpg" alt="#">
+                        <div class="txt_box">
+                          <ul>
+                            <li><span>주소 : </span> 대구광역시 북구 태평로 161 롯데백화점 지하 1층 </li>
+                            <li><span>운영시간 : </span> 월~목 10:30~20:00<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;금~일 10:30~20:30 </li>
+                            <li><span>전화번호 : </span> 053-660-3007
+                        </div>
+                      </a>
+                      <a href="#" class="road">찾아오시는 길</a>
+                    </div>
+                    <div class="swiper-slide">
+                      <h3>대전 타임월드점</h3>
+                      <a href="#">
+                        <img src="images/타임월드점.png" alt="#">
+                        <div class="txt_box">
+                          <ul>
+                            <li><span>주소 : </span> 대전광역시 서구 대덕대로 211 갤러리아 타임월드 4층 </li>
+                            <li><span>운영시간 : </span> 월~목 10:30~20:00<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;금~일 10:30~20:30 </li>
+                            <li><span>전화번호 : </span> 042-720-6250 </li>
+                          </ul>
+                        </div>
+                      </a>
+                      <a href="#" class="road">찾아오시는 길</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- 스파 트리트먼트 -->
+              <div class="right_box">
+                <h2>SPA TREATMENT</h2>
+                <div class="right-box-wrap">
+                  <!-- 압구정점 -->
+                  <div class="agj">
+                    <h3>압구정점</h3>
+                    <div class="agj-wrap">
+                      <div class="img_box">
+                        <a href="#"><img src="images/압구정점.jpg" alt="#"></a>
+                        <a href="#" class="resv">예약하기</a>
+                      </div>
+                      <ul class="txt3">
+                        <li>주소 : 서울특별시 강남구 언주로 868 지하1층</li>
+                        <li>운영시간 : 월~일 10:00~22:00</li>
+                        <li>전화번호 : 02-549-5874 </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 경리단길점 -->
+                  <div class="kldg">
+                    <h3>경리단길점</h3>
+                    <div class="kldg-wrap">
+                      <div class="img_box">
+                        <a href="#"><img src="images/경리단길점.jpg" alt="#"></a>
+                        <a href="#" class="resv">예약하기</a>
+                      </div>
+                      <ul class="txt3">
+                        <li>주소 : 서울특별시 용산구 회나무로 42길 10 2층</li>
+                        <li>운영시간 : 월~일 10:00~22:00</li>
+                        <li>전화번호 : 02-790-7561 </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <a href="#">더 많은 스파 알아보기 &gt;</a>
+              </div>
+            </div>
+            <!-- 로고 모음 -->
+            <div class="b_wrap">
+              <ul>
+                <li><a href="#"><img src="images/로고1.png" alt="#"></a></li>
+                <li><a href="#"><img src="images/로고2.png" alt="#"></a></li>
+                <li><a href="#"><img src="images/로고3.png" alt="#"></a></li>
+                <li><a href="#"><img src="images/로고4.png" alt="#"></a></li>
+                <li><a href="#"><img src="images/로고5.png" alt="#"></a></li>
+                <li><a href="#"><img src="images/로고6.png" alt="#"></a></li>
+              </ul>
+            </div>
+          </div>
+      </section>
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="inner">
+              <!-- 푸터_왼쪽 -->
+              <div class="left_Fbox left">
+              <!-- 메일주소 -->
+                <div class="input_wrap">
+                  <input type="email" placeholder="이메일 주소를 입력해주세요.">
+                  <a href="#"class="btn">구독</a>
+                </div>
+                <!-- 구독 -->
+                <p class="sub">매주 월요일 오후, 구독자님을 위한 제품과 브랜드 이야기를 전해드립니다.<br>구독은 언제든지 해지하실 수 있습니다. <a href="#">미리보기</a>
+                </p>
+              <!-- 전화&이메일 -->
+                <ul class="call">
+                  <li>
+                    <p>
+                      <span>고객센터</span><br>
+                      1644-2357<br>
+                      webmaster@lush.co.kr
+                    </p>
+                    <p>
+                      상담전화 13:00~16:00(평일)<br>
+                      상담톡 10:00~16:00(평일)
+                    </p>
+                  </li>
+                  <li>
+                    <span>기업선물</span><br>
+                    070-4713-8543<br>
+                    order@lush.co.kr
+                  </li>
+                </ul>
+              <!-- sns모음 -->
+                <ul class="sns_box">
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fa-solid fa-comment"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa-solid fa-blog"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+              </div>
+              <!-- 푸터_오른쪽 -->
+              <div class="right_Fbox right">
+                <p>공지사항</p>
+                <!-- 공지사항 -->
+                <ul class="notice">
+                  <li><a href="#">2023-02-07[공지] 덕찌 발급 시점 변경안내</a></li>
+                  <li><a href="#">2023-02-07[배송공지]2023 발렌타인 배송 안내</a></li>
+                </ul>
+                <!-- 푸터 소메뉴 -->
+                <ul class="f_menu">
+                  <span class="flx">
+                    <li><a href="#">러쉬소개</a></li>
+                    <li><a href="#" class="yellow">개인정보처리방침</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </span>
+                  <span class="flx">
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">영상정보관리지침</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                  </span>
+                  <span class="flx">
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">이용약관</a></li>
+                  </span>
+                </ul>
+                <!-- 회사 정보 -->
+                <ul class="info">
+                  <li>서울 강남구 학동로 336 (메이트리 빌당(matree B/D))&nbsp;1층 주식회사 러쉬코리아</li>
+                  <li>사이트 운영자 : 주식회사 러쉬코리아 <span class="bar">|</span> <br>대표이사 : 우미령</li>
+                  <li>사업자 등록번호 : 201-81-77964</li>
+                  <li>통신판매업 신고번호 : 2022-서울강남-02857 <span class="bar">|</span> <br>개인정보보호책임자 : 이명학 </li>
+                </ul>
+                <p class="copyright">COPYRIGHT &COPY; LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.</p>
+              </div>
+              <!-- 고탑버튼 -->
+              <a class="gotop_btn">
+                <div class="arrow_up"></div>
+              </a>
+            </div>
+        </footer>  
+    </div>
+</body>
+</html>
